@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bella Helen House Clearances</title>
+<meta name="description" content="Family-run house clearances and rubbish removal in Belfast and across Northern Ireland. 10+ years, fully licensed waste carrier, fully insured. Free quotes: 07368 255073.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Rye&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1d4fa3; --blue-deep:#0f2f6b; --navy:#0a1f47;
+  --lime:#c9e632; --lime-soft:#e6f59a; --green:#1f9a6b; --green-deep:#13704d;
+  --ink:#0d1b33; --muted:#53627d; --paper:#f5f8ee; --white:#fff; --line:#dbe3d0;
+  --radius:22px; --shadow:0 18px 50px -18px rgba(10,31,71,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.brand-font{font-family:Rye,serif;font-weight:400;letter-spacing:.01em}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.kicker::before{content:"";width:22px;height:2px;background:currentColor}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.05;letter-spacing:-.02em;font-weight:800}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-lime{background:var(--lime);color:var(--navy);box-shadow:0 10px 24px -10px rgba(201,230,50,.9)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(15,47,107,.92);backdrop-filter:blur(10px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:42px;height:42px}
+.logo b{display:block;font-family:Rye,serif;font-weight:400;font-size:1.25rem;color:var(--lime);line-height:1}
+.logo small{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;opacity:.85;margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none;font-weight:500;font-size:.96rem}
+.nav ul a{text-decoration:none;opacity:.85}
+.nav ul a:hover{opacity:1;color:var(--lime)}
+.nav .btn{padding:10px 18px}
+@media (max-width:900px){.nav ul{display:none}}
+@media (max-width:520px){.nav .call-txt{display:none}}
+
+/* HERO */
+.hero{background:radial-gradient(1200px 600px at 85% -10%,#2c66c9 0%,transparent 60%),linear-gradient(160deg,var(--blue-deep),var(--navy));color:#fff;position:relative;overflow:hidden;padding:56px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.7rem);line-height:.98;letter-spacing:-.03em;font-weight:800;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--lime);position:relative;white-space:nowrap}
+.hero h1 em svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px}
+.hero p.lead{font-size:1.15rem;max-width:520px;opacity:.9}
+.hero .kicker{color:var(--lime)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:.92rem;opacity:.9}
+.hero-badges span{display:flex;align-items:center;gap:8px}
+.hero-badges i{width:8px;height:8px;border-radius:50%;background:var(--lime);display:inline-block}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding-top:36px}}
+
+/* Clutter stage */
+.stage{position:relative;height:500px;border-radius:28px;overflow:hidden;background:linear-gradient(#f3eadb 0 64%,#c9a77c 64% 100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.6),inset 0 0 0 6px rgba(255,255,255,.08);user-select:none;color:var(--ink)}
+.stage::before{content:"";position:absolute;left:0;right:0;top:64%;height:10px;background:#9b7a52}
+.stage::after{content:"";position:absolute;inset:64% 0 0 0;background:repeating-linear-gradient(90deg,transparent 0 78px,rgba(0,0,0,.07) 78px 80px)}
+.window{position:absolute;left:8%;top:9%;width:150px;height:130px;border:9px solid #fff;border-radius:6px;background:linear-gradient(#9ed0ff,#d9efff);box-shadow:0 6px 0 rgba(0,0,0,.06)}
+.window::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:7px;margin-left:-3px;background:#fff}
+.window::after{content:"";position:absolute;top:50%;left:0;right:0;height:7px;margin-top:-3px;background:#fff}
+.frame{position:absolute;right:30%;top:12%;width:84px;height:64px;background:var(--green);border:6px solid #8a6a43;border-radius:4px}
+.stage-hint{position:absolute;top:18px;right:18px;z-index:5;background:var(--navy);color:#fff;font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:999px;display:flex;align-items:center;gap:8px}
+.stage-hint .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.8);opacity:.4}}
+.junk{position:absolute;width:var(--s,74px);cursor:pointer;z-index:3;transform:rotate(var(--r,0deg));transition:transform .2s;filter:drop-shadow(0 8px 6px rgba(0,0,0,.18));background:none;border:0;padding:0}
+.junk:hover{transform:rotate(var(--r,0deg)) scale(1.1) translateY(-4px)}
+.junk:focus-visible{outline:3px solid var(--blue);outline-offset:4px;border-radius:8px}
+.junk svg{width:100%;height:auto}
+.junk.gone{transition:transform .75s cubic-bezier(.6,-.3,.7,1),opacity .75s;opacity:0;pointer-events:none}
+.van{position:absolute;bottom:14px;right:-4px;width:250px;z-index:4;transition:transform .3s}
+.van.bump{animation:bump .35s}
+@keyframes bump{40%{transform:translateY(-8px) rotate(-1.5deg)}}
+.counter{position:absolute;left:18px;bottom:18px;z-index:5;background:#fff;border-radius:16px;padding:10px 16px;box-shadow:var(--shadow);font-weight:600;font-size:.86rem;color:var(--muted)}
+.counter b{display:block;font-size:1.6rem;line-height:1;color:var(--green)}
+.cleared{position:absolute;inset:0;z-index:6;display:grid;place-items:center;text-align:center;pointer-events:none;opacity:0;transition:opacity .5s}
+.cleared.show{opacity:1;pointer-events:auto}
+.cleared div{background:#fff;padding:26px 30px;border-radius:22px;box-shadow:var(--shadow);max-width:300px}
+.cleared h3{font-size:1.5rem;line-height:1.1;margin-bottom:6px}
+.cleared p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.sparkle{position:absolute;z-index:7;width:10px;height:10px;border-radius:50%;background:var(--lime);pointer-events:none;animation:spark .7s forwards}
+@keyframes spark{to{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
+@media (max-width:520px){.stage{height:430px}.van{width:190px}.window{width:110px;height:96px}.junk{width:calc(var(--s,74px)*.8)}}
+
+/* marquee */
+.ticker{background:var(--lime);color:var(--navy);overflow:hidden;font-weight:800;font-size:1.05rem;letter-spacing:.02em;transform:rotate(-1.2deg);margin:-28px -10px 0;position:relative;z-index:2;border-block:3px solid var(--navy)}
+.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite}
+.ticker span{padding:16px 22px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.ticker span::after{content:"♻";font-size:1.2rem;color:var(--green-deep)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head p{color:var(--muted);font-size:1.1rem;margin-top:14px}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:#fff;border-radius:var(--radius);padding:30px 28px;border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc .ico{width:58px;height:58px;border-radius:16px;background:var(--paper);display:grid;place-items:center;margin-bottom:20px;transition:background .3s}
+.svc:hover .ico{background:var(--lime)}
+.svc .ico svg{width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:1.3rem;margin-bottom:8px;line-height:1.2}
+.svc p{color:var(--muted)}
+.svc.feature{grid-column:span 2;background:var(--blue);color:#fff;border:0;display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center}
+.svc.feature p{color:rgba(255,255,255,.82)}
+.svc.feature .ico{background:rgba(255,255,255,.12)}
+.svc.feature .ico svg{stroke:var(--lime)}
+.svc.feature ul{list-style:none;display:grid;gap:10px}
+.svc.feature li{background:rgba(255,255,255,.1);border-radius:12px;padding:10px 14px;font-weight:600;display:flex;gap:10px;align-items:center}
+.svc.feature li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime)}
+@media (max-width:900px){.services-grid{grid-template-columns:1fr 1fr}.svc.feature{grid-column:span 2}}
+@media (max-width:620px){.services-grid{grid-template-columns:1fr}.svc.feature{grid-column:auto;grid-template-columns:1fr}}
+
+/* ESTIMATOR */
+.estimator{background:var(--navy);color:#fff;border-radius:36px;margin-inline:16px;padding:90px 0;position:relative;overflow:hidden}
+.estimator .kicker{color:var(--lime)}
+.estimator .sec-head p{color:rgba(255,255,255,.75)}
+.est-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.items{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 10px 10px 16px;transition:background .2s,border-color .2s}
+.item.on{background:rgba(201,230,50,.12);border-color:var(--lime)}
+.item span{font-weight:500;font-size:.98rem}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:32px;height:32px;border-radius:10px;border:0;background:rgba(255,255,255,.12);color:#fff;font:inherit;font-size:1.2rem;font-weight:700;cursor:pointer;line-height:1}
+.qty button:hover{background:var(--lime);color:var(--navy)}
+.qty output{min-width:22px;text-align:center;font-weight:700}
+.est-panel{position:sticky;top:96px;background:linear-gradient(160deg,#16387d,#0f2a5f);border-radius:28px;padding:30px;border:1px solid rgba(255,255,255,.1)}
+.est-van{width:100%;max-width:420px;margin:0 auto 10px}
+#cargo{transition:width .5s cubic-bezier(.3,1.4,.5,1)}
+.meter-label{text-align:center}
+.meter-label .pct{font-size:3.2rem;font-weight:800;line-height:1;color:var(--lime)}
+.meter-label .size{font-size:1.25rem;font-weight:700;margin-top:6px}
+.meter-label small{display:block;color:rgba(255,255,255,.6);margin-top:6px;font-size:.88rem}
+.est-list{margin:20px 0;font-size:.92rem;color:rgba(255,255,255,.8);min-height:22px;text-align:center}
+.est-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.est-actions .btn{justify-content:center;padding:13px 14px}
+.reset{background:none;border:0;color:rgba(255,255,255,.6);font:inherit;text-decoration:underline;cursor:pointer;display:block;margin:14px auto 0;font-size:.9rem}
+@media (max-width:900px){.est-grid{grid-template-columns:1fr}.est-panel{position:relative;top:0;order:-1}}
+@media (max-width:520px){.items{grid-template-columns:1fr}.estimator{margin-inline:8px;border-radius:26px;padding:70px 0}}
+
+/* JOURNEY / hierarchy */
+.journey{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.funnel{display:grid;gap:12px}
+.tier{border-radius:18px;padding:22px 24px;display:flex;align-items:center;gap:18px;color:#fff;transform:translateX(-30px);opacity:0;transition:transform .7s,opacity .7s}
+.tier.in{transform:none;opacity:1}
+.tier b{font-size:1.25rem;display:block;line-height:1.2}
+.tier p{opacity:.85;font-size:.95rem}
+.tier .n{flex:none;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-weight:800;font-size:1.1rem}
+.tier:nth-child(1){background:var(--green);margin-right:0}
+.tier:nth-child(2){background:var(--green-deep);margin-right:8%;transition-delay:.12s}
+.tier:nth-child(3){background:var(--blue);margin-right:16%;transition-delay:.24s}
+.tier:nth-child(4){background:#5b6680;margin-right:24%;transition-delay:.36s}
+@media (max-width:900px){.journey{grid-template-columns:1fr}}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{position:relative;padding-top:64px}
+.step::before{counter-increment:s;content:"0" counter(s);position:absolute;top:0;left:0;font-size:3rem;font-weight:800;color:transparent;-webkit-text-stroke:2px var(--blue);line-height:1}
+.step::after{content:"";position:absolute;top:26px;left:86px;right:-10px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+.step:last-child::after{display:none}
+.step h3{font-size:1.2rem;margin-bottom:6px}
+.step p{color:var(--muted)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.step::after{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* WHY */
+.why{background:#fff;border-block:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.why-item{padding:34px 26px;border-left:1px solid var(--line)}
+.why-item:first-child{border-left:0}
+.why-item .big{font-size:2.8rem;font-weight:800;color:var(--blue);line-height:1}
+.why-item .big span{color:var(--green)}
+.why-item h3{margin:10px 0 6px;font-size:1.1rem}
+.why-item p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr 1fr}.why-item:nth-child(3){border-left:0}.why-item{border-top:1px solid var(--line)}}
+@media (max-width:520px){.why-grid{grid-template-columns:1fr}.why-item{border-left:0}}
+
+/* CONTACT */
+.contact{background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;position:relative;overflow:hidden}
+.contact .kicker{color:var(--lime)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.phone-big{display:block;font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;color:var(--lime);text-decoration:none;letter-spacing:-.02em;line-height:1;margin:22px 0 10px}
+.contact-links{display:grid;gap:12px;margin-top:28px}
+.contact-links a{display:flex;align-items:center;gap:14px;text-decoration:none;background:rgba(255,255,255,.08);padding:16px 18px;border-radius:16px;font-weight:600;transition:background .2s}
+.contact-links a:hover{background:rgba(255,255,255,.16)}
+.contact-links svg{width:22px;height:22px;flex:none;stroke:var(--lime);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-links small{display:block;font-weight:400;opacity:.7;font-size:.85rem}
+form{background:#fff;color:var(--ink);border-radius:28px;padding:32px;box-shadow:var(--shadow)}
+form h3{font-size:1.5rem;margin-bottom:4px}
+form > p{color:var(--muted);margin-bottom:18px}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .btn{width:100%;justify-content:center;margin-top:20px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.row2{grid-template-columns:1fr}form{padding:24px}}
+
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 0 100px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .logo b{font-size:1.1rem}
+
+.mobile-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:8px}
+.mobile-bar .btn{flex:1;justify-content:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)}
+@media (max-width:700px){.mobile-bar{display:flex}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.tier{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG sprite: clutter items -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-box" viewBox="0 0 64 64"><path fill="#c8975a" d="M6 22 32 12l26 10v28L32 60 6 50z"/><path fill="#b38149" d="M32 32v28L6 50V22z"/><path fill="#ddb57f" d="M6 22 32 12l26 10-26 10z"/><path fill="#f3e2b8" d="m18 17 26 10v7l-6-2v-6L12 19z"/></symbol>
+    <symbol id="i-chair" viewBox="0 0 64 64"><rect x="16" y="4" width="32" height="30" rx="6" fill="#e0533d"/><rect x="12" y="32" width="40" height="10" rx="4" fill="#c43e2b"/><path stroke="#6b4a2b" stroke-width="4" stroke-linecap="round" d="M17 42v18M47 42v18M22 42l-3 14M42 42l3 14"/></symbol>
+    <symbol id="i-lamp" viewBox="0 0 64 64"><path fill="#f4c542" d="M18 6h28l8 20H10z"/><path fill="#e3ad1e" d="M10 26h44l-2 3H12z"/><rect x="30" y="28" width="4" height="26" fill="#555"/><rect x="20" y="54" width="24" height="6" rx="3" fill="#333"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 64 64"><rect x="4" y="10" width="56" height="38" rx="5" fill="#2d2f38"/><rect x="9" y="15" width="46" height="28" rx="2" fill="#5ab3d6"/><path fill="#fff" opacity=".35" d="M9 15h22L13 43H9z"/><path stroke="#2d2f38" stroke-width="4" stroke-linecap="round" d="m24 48-6 10M40 48l6 10"/></symbol>
+    <symbol id="i-mattress" viewBox="0 0 96 48"><rect x="2" y="10" width="92" height="30" rx="10" fill="#eef1f6"/><rect x="2" y="10" width="92" height="30" rx="10" fill="none" stroke="#b9c3d6" stroke-width="3"/><g fill="#b9c3d6"><circle cx="22" cy="25" r="2.5"/><circle cx="40" cy="25" r="2.5"/><circle cx="58" cy="25" r="2.5"/><circle cx="76" cy="25" r="2.5"/></g></symbol>
+    <symbol id="i-bag" viewBox="0 0 64 64"><path fill="#23262e" d="M26 14c-12 6-20 18-20 30 0 10 10 16 26 16s26-6 26-16c0-12-8-24-20-30z"/><path fill="#3a3f4b" d="M18 30c4-6 8-10 12-12-2 8-6 14-12 20z"/><path fill="#23262e" d="M26 14 22 4l10 6 10-6-4 10z"/></symbol>
+    <symbol id="i-tyre" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#2a2a2a"/><circle cx="32" cy="32" r="14" fill="#9aa0a8"/><circle cx="32" cy="32" r="6" fill="#5e636b"/><circle cx="32" cy="32" r="24" fill="none" stroke="#3d3d3d" stroke-width="3" stroke-dasharray="4 5"/></symbol>
+    <symbol id="i-plant" viewBox="0 0 64 64"><path fill="#2f9e5f" d="M32 36C20 34 14 22 18 10c10 4 14 14 14 26zm0 0c2-12 10-22 20-22 2 12-8 22-20 22z"/><path fill="#c96a3c" d="M18 36h28l-4 24H22z"/><rect x="16" y="34" width="32" height="6" rx="2" fill="#b0562c"/></symbol>
+    <symbol id="i-fridge" viewBox="0 0 48 80"><rect x="4" y="2" width="40" height="76" rx="6" fill="#e9edf2" stroke="#bcc5d1" stroke-width="3"/><path stroke="#bcc5d1" stroke-width="3" d="M4 30h40"/><rect x="34" y="12" width="4" height="12" rx="2" fill="#8d97a5"/><rect x="34" y="38" width="4" height="16" rx="2" fill="#8d97a5"/></symbol>
+  </defs>
+</svg>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Bella Helen House Clearances — home">
+      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 22 24 6l20 16" fill="none" stroke="#c9e632" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 18v22h20V18" fill="none" stroke="#fff" stroke-width="3"/><g fill="#c9e632"><rect x="19" y="23" width="4" height="4"/><rect x="25" y="23" width="4" height="4"/><rect x="19" y="29" width="4" height="4"/><rect x="25" y="29" width="4" height="4"/></g></svg>
+      <span><b>Bella Helen</b><small>House Clearances</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#estimate">Van estimator</a></li>
+      <li><a href="#recycling">Recycling</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-lime" href="tel:+447368255073">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span class="call-txt">07368 255073</span>
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Reputable Recycling · Belfast &amp; NI</span>
+      <h1>Clear the clutter.<br>Keep the <em>calm.<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 10C50 2 150 2 198 8" fill="none" stroke="#1f9a6b" stroke-width="5" stroke-linecap="round"/></svg></em></h1>
+      <p class="lead">Family-run house clearances and rubbish removal for over 10 years. One call, a free quote, and we handle the lifting, loading and responsible recycling — so you don't have to.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-lime" href="tel:+447368255073">Call for a free quote</a>
+        <a class="btn btn-ghost" href="#estimate">Load the van →</a>
+      </div>
+      <div class="hero-badges">
+        <span><i></i>Fully licensed waste carrier</span>
+        <span><i></i>Fully insured</span>
+        <span><i></i>Free quotations</span>
+      </div>
+    </div>
+
+    <div class="stage" id="stage" aria-label="Interactive room: tap items to clear them into the van">
+      <div class="window"></div>
+      <div class="frame"></div>
+      <div class="stage-hint"><span class="dot"></span>Tap the clutter</div>
+
+      <button class="junk" style="left:6%;top:56%;--s:112px;--r:-4deg" aria-label="Clear mattress"><svg viewBox="0 0 96 48"><use href="#i-mattress"/></svg></button>
+      <button class="junk" style="left:34%;top:40%;--s:70px;--r:3deg" aria-label="Clear chair"><svg viewBox="0 0 64 64"><use href="#i-chair"/></svg></button>
+      <button class="junk" style="left:52%;top:22%;--s:64px;--r:-6deg" aria-label="Clear lamp"><svg viewBox="0 0 64 64"><use href="#i-lamp"/></svg></button>
+      <button class="junk" style="left:8%;top:44%;--s:58px;--r:8deg" aria-label="Clear box"><svg viewBox="0 0 64 64"><use href="#i-box"/></svg></button>
+      <button class="junk" style="left:20%;top:70%;--s:72px;--r:-3deg" aria-label="Clear box"><svg viewBox="0 0 64 64"><use href="#i-box"/></svg></button>
+      <button class="junk" style="left:56%;top:46%;--s:76px;--r:2deg" aria-label="Clear television"><svg viewBox="0 0 64 64"><use href="#i-tv"/></svg></button>
+      <button class="junk" style="left:72%;top:28%;--s:52px;--r:-2deg" aria-label="Clear fridge"><svg viewBox="0 0 48 80"><use href="#i-fridge"/></svg></button>
+      <button class="junk" style="left:40%;top:66%;--s:66px;--r:10deg" aria-label="Clear rubbish bag"><svg viewBox="0 0 64 64"><use href="#i-bag"/></svg></button>
+      <button class="junk" style="left:30%;top:16%;--s:56px;--r:0deg" aria-label="Clear plant"><svg viewBox="0 0 64 64"><use href="#i-plant"/></svg></button>
+      <button class="junk" style="left:3%;top:76%;--s:56px;--r:-12deg" aria-label="Clear tyre"><svg viewBox="0 0 64 64"><use href="#i-tyre"/></svg></button>
+      <button class="junk" style="left:46%;top:56%;--s:50px;--r:-8deg" aria-label="Clear box"><svg viewBox="0 0 64 64"><use href="#i-box"/></svg></button>
+      <button class="junk" style="left:62%;top:66%;--s:60px;--r:6deg" aria-label="Clear rubbish bag"><svg viewBox="0 0 64 64"><use href="#i-bag"/></svg></button>
+
+      <svg class="van" id="heroVan" viewBox="0 0 240 120" aria-hidden="true">
+        <rect x="6" y="8" width="150" height="82" rx="8" fill="#1d4fa3"/>
+        <rect x="6" y="8" width="150" height="82" rx="8" fill="none" stroke="#0f2f6b" stroke-width="3"/>
+        <text x="81" y="44" text-anchor="middle" font-family="Rye,serif" font-size="19" fill="#c9e632">Bella Helen</text>
+        <text x="81" y="60" text-anchor="middle" font-family="Jost,sans-serif" font-weight="700" font-size="9" letter-spacing="2" fill="#fff">HOUSE CLEARANCES</text>
+        <text x="81" y="77" text-anchor="middle" font-family="Jost,sans-serif" font-weight="800" font-size="11" fill="#c9e632">07368 255073</text>
+        <path d="M156 30h40l26 28v32h-66z" fill="#f4f6fa" stroke="#0f2f6b" stroke-width="3"/>
+        <path d="M164 38h28l18 20h-46z" fill="#8fc6ee"/>
+        <rect x="2" y="88" width="226" height="10" rx="4" fill="#0f2f6b"/>
+        <circle cx="48" cy="98" r="15" fill="#1c1c1c"/><circle cx="48" cy="98" r="6" fill="#aab"/>
+        <circle cx="190" cy="98" r="15" fill="#1c1c1c"/><circle cx="190" cy="98" r="6" fill="#aab"/>
+        <rect x="216" y="64" width="8" height="8" rx="2" fill="#f4c542"/>
+      </svg>
+
+      <div class="counter"><b id="count">0</b>items recycled</div>
+      <div class="cleared" id="cleared"><div><h3>Room cleared ✨</h3><p>That's the idea. Now imagine it's your house — we do the real thing.</p><button class="btn btn-green" id="mess">Mess it up again</button></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker">
+  <span>House clearances</span><span>Rubbish removal</span><span>Man with a van</span><span>Mattresses · fridges · cookers</span><span>Free quotations</span><span>Family run · 10+ years</span><span>Belfast &amp; Northern Ireland</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What we clear</span>
+      <h2>From one old mattress to an entire house.</h2>
+      <p>Whatever needs to go, we bring the van, the manpower and the know-how — and leave the place swept and ready.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc feature reveal">
+        <div>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+          <h3>Full house clearances</h3>
+          <p>Moving, downsizing, renting out or settling a loved one's home — we clear every room, carefully and respectfully, at a pace that suits you.</p>
+        </div>
+        <ul>
+          <li>Whole houses &amp; flats</li>
+          <li>Single rooms</li>
+          <li>Lofts, garages &amp; sheds</li>
+          <li>Swept clean when we leave</li>
+        </ul>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M6 6l1 14h10l1-14"/><path d="M10 10v6M14 10v6"/></svg></div>
+        <h3>Rubbish removal</h3>
+        <p>Rubbish runs and dump removal handled for you — no trailer, no tip queue, no hassle.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="14" height="10" rx="1"/><path d="M15 9h4l3 3v4h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div>
+        <h3>Man with a van</h3>
+        <p>Need muscle and a van? Our own private fleet means we turn up when we say we will.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 9h14M9 5v2M9 12v3"/></svg></div>
+        <h3>Bulky items</h3>
+        <p>Mattresses, fridges, cookers, sofas and wardrobes — the awkward stuff is our everyday.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 19H4l3-5"/><path d="M10 5l2-3 2 3"/><path d="M17 19h3l-3-5"/><path d="M8 10 12 3l4 7"/><path d="M7 19h10"/></svg></div>
+        <h3>Responsible disposal</h3>
+        <p>As a licensed waste carrier we make sure your waste is disposed of as environmentally friendly as possible.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="estimator" id="estimate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Load the van</span>
+      <h2>How much van do you need?</h2>
+      <p>Add what you'd like gone and watch the van fill up. Then send the list over for a free, no-obligation quote.</p>
+    </div>
+    <div class="est-grid">
+      <div class="items" id="items"></div>
+      <aside class="est-panel" aria-live="polite">
+        <svg class="est-van" viewBox="0 0 240 120" aria-hidden="true">
+          <defs>
+            <clipPath id="cargoClip"><rect x="12" y="14" width="138" height="70" rx="5"/></clipPath>
+            <pattern id="stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#c9e632"/><rect width="5" height="12" fill="#b4d11e"/></pattern>
+          </defs>
+          <rect x="6" y="8" width="150" height="82" rx="8" fill="#0a1f47" stroke="#2c5bb8" stroke-width="3"/>
+          <g clip-path="url(#cargoClip)"><rect id="cargo" x="12" y="14" width="0" height="70" fill="url(#stripes)"/></g>
+          <path d="M156 30h40l26 28v32h-66z" fill="#f4f6fa" stroke="#0f2f6b" stroke-width="3"/>
+          <path d="M164 38h28l18 20h-46z" fill="#8fc6ee"/>
+          <rect x="2" y="88" width="226" height="10" rx="4" fill="#2c5bb8"/>
+          <circle cx="48" cy="98" r="15" fill="#1c1c1c"/><circle cx="48" cy="98" r="6" fill="#aab"/>
+          <circle cx="190" cy="98" r="15" fill="#1c1c1c"/><circle cx="190" cy="98" r="6" fill="#aab"/>
+        </svg>
+        <div class="meter-label">
+          <div class="pct" id="pct">0%</div>
+          <div class="size" id="size">Empty van</div>
+          <small>A rough guide only — your free quote is confirmed with you directly.</small>
+        </div>
+        <div class="est-list" id="estList">Nothing added yet.</div>
+        <div class="est-actions">
+          <a class="btn btn-lime" id="waBtn" href="https://wa.me/447368255073" target="_blank" rel="noopener">WhatsApp list</a>
+          <a class="btn btn-ghost" id="mailBtn" href="mailto:bhhouseclearance@gmail.com">Email list</a>
+        </div>
+        <button class="reset" id="resetEst" type="button">Clear the list</button>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<section id="recycling">
+  <div class="wrap journey">
+    <div class="reveal">
+      <span class="kicker">Reputable Recycling</span>
+      <h2>Your old stuff gets a second chance.</h2>
+      <p style="color:var(--muted);font-size:1.1rem;margin-top:14px">We're committed to delivering our service around your requirements — and to making sure as little as possible ends up where it shouldn't. Every load is sorted with one simple rule: reuse first, landfill last.</p>
+      <a class="btn btn-blue" href="#contact" style="margin-top:26px">Book a clearance</a>
+    </div>
+    <div class="funnel" id="funnel">
+      <div class="tier"><span class="n">1</span><div><b>Reuse</b><p>Good furniture and items are kept in use wherever possible.</p></div></div>
+      <div class="tier"><span class="n">2</span><div><b>Recycle</b><p>Metals, appliances, cardboard and more are separated for recycling.</p></div></div>
+      <div class="tier"><span class="n">3</span><div><b>Recover</b><p>What can't be recycled is sent for recovery where available.</p></div></div>
+      <div class="tier"><span class="n">4</span><div><b>Dispose — properly</b><p>Only what's left goes to licensed facilities. Never fly-tipped.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div class="why-item reveal"><div class="big">10<span>+</span></div><h3>Years in business</h3><p>A decade of clearing homes across Northern Ireland.</p></div>
+    <div class="why-item reveal"><div class="big">♥</div><h3>Family run</h3><p>You deal with the same friendly people from call to clean.</p></div>
+    <div class="why-item reveal"><div class="big">✓</div><h3>Licensed carrier</h3><p>We hold an up-to-date waste carrier's licence.</p></div>
+    <div class="why-item reveal"><div class="big">£<span>0</span></div><h3>Free quotations</h3><p>Know the cost upfront — no obligation, no surprises.</p></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">How it works</span>
+      <h2>Four steps to an empty room.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Get in touch</h3><p>Call, WhatsApp or email and tell us what needs to go.</p></div>
+      <div class="step reveal"><h3>Free quote</h3><p>Send photos or your van list and we'll give you a clear price.</p></div>
+      <div class="step reveal"><h3>We clear it</h3><p>We arrive on time, do all the lifting and load the van.</p></div>
+      <div class="step reveal"><h3>Recycled right</h3><p>Your items are sorted for reuse and recycling. Job done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker">Free quotation</span>
+      <h2>Mattress, fridge, cooker or a full house?</h2>
+      <a class="phone-big" href="tel:+447368255073">07368 255073</a>
+      <p style="opacity:.8">Call now for a free quote. Serving Belfast and households throughout Northern Ireland.</p>
+      <div class="contact-links">
+        <a href="https://wa.me/447368255073" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg><span>WhatsApp us<small>Send photos for a faster quote</small></span></a>
+        <a href="mailto:bhhouseclearance@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>bhhouseclearance@gmail.com<small>We reply as soon as we can</small></span></a>
+        <a href="https://www.facebook.com/search/top?q=Bella%20Helen%20House%20Clearances" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M15 3h-3a4 4 0 0 0-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg><span>Facebook<small>See our latest clearances</small></span></a>
+      </div>
+    </div>
+    <form id="quoteForm" class="reveal">
+      <h3>Request a quote</h3>
+      <p>Fill this in and it opens a ready-made email to us.</p>
+      <div class="row2">
+        <div><label for="fName">Name</label><input id="fName" required autocomplete="name"></div>
+        <div><label for="fPhone">Phone</label><input id="fPhone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="row2">
+        <div><label for="fArea">Area / postcode</label><input id="fArea" placeholder="e.g. BT5"></div>
+        <div><label for="fType">Job type</label>
+          <select id="fType"><option>Full house clearance</option><option>Single room / loft / garage</option><option>Rubbish removal</option><option>Bulky item collection</option><option>Man with a van</option></select>
+        </div>
+      </div>
+      <label for="fMsg">What needs to go?</label>
+      <textarea id="fMsg" placeholder="Tell us about the items, access, stairs, preferred dates…"></textarea>
+      <button class="btn btn-blue" type="submit">Send quote request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 22 24 6l20 16" fill="none" stroke="#c9e632" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 18v22h20V18" fill="none" stroke="#fff" stroke-width="3"/></svg>
+      <span><b>Bella Helen</b><small>House Clearances · Reputable Recycling</small></span>
+    </a>
+    <div>Fully insured &amp; licensed waste carrier · Belfast, Northern Ireland</div>
+    <div>© <span id="yr"></span> Bella Helen House Clearances</div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-lime" href="tel:+447368255073">Call now</a>
+  <a class="btn btn-green" href="https://wa.me/447368255073" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Hero: tap clutter into the van ---------- */
+  const stage = document.getElementById('stage');
+  const van = document.getElementById('heroVan');
+  const countEl = document.getElementById('count');
+  const cleared = document.getElementById('cleared');
+  const junk = [...stage.querySelectorAll('.junk')];
+  let count = 0;
+
+  function sparks(x, y) {
+    if (reduce) return;
+    for (let i = 0; i < 8; i++) {
+      const s = document.createElement('span');
+      s.className = 'sparkle';
+      const a = (Math.PI * 2 * i) / 8;
+      s.style.left = x + 'px'; s.style.top = y + 'px';
+      s.style.setProperty('--dx', Math.cos(a) * 40 + 'px');
+      s.style.setProperty('--dy', Math.sin(a) * 40 + 'px');
+      stage.appendChild(s);
+      setTimeout(() => s.remove(), 700);
+    }
+  }
+
+  function clearItem(el) {
+    if (el.classList.contains('gone')) return;
+    const sr = stage.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    const v = van.getBoundingClientRect();
+    const dx = (v.left + v.width * 0.33) - (r.left + r.width / 2);
+    const dy = (v.top + v.height * 0.4) - (r.top + r.height / 2);
+    sparks(r.left - sr.left + r.width / 2, r.top - sr.top + r.height / 2);
+    el.style.transform = `translate(${dx}px, ${dy}px) scale(.15) rotate(${dx > 0 ? 260 : -260}deg)`;
+    el.classList.add('gone');
+    setTimeout(() => {
+      van.classList.remove('bump'); void van.getBoundingClientRect(); van.classList.add('bump');
+      countEl.textContent = ++count;
+      if (junk.every(j => j.classList.contains('gone'))) cleared.classList.add('show');
+    }, reduce ? 0 : 650);
+  }
+  junk.forEach(el => el.addEventListener('click', () => clearItem(el)));
+
+  document.getElementById('mess').addEventListener('click', () => {
+    cleared.classList.remove('show');
+    junk.forEach((el, i) => setTimeout(() => {
+      el.classList.remove('gone'); el.style.transform = '';
+    }, i * 60));
+  });
+
+  /* ---------- Ticker duplicate for seamless loop ---------- */
+  const tick = document.getElementById('ticker');
+  tick.innerHTML += tick.innerHTML;
+
+  /* ---------- Van estimator ---------- */
+  // Units are rough share of one Luton-size van (100 = full)
+  const ITEMS = [
+    ['Sofa', 12], ['Armchair', 6], ['Mattress', 6], ['Bed frame', 8],
+    ['Wardrobe', 12], ['Chest of drawers', 6], ['Fridge / freezer', 8], ['Washing machine', 6],
+    ['Cooker', 6], ['Dining table', 6], ['Chairs', 2], ['TV', 2],
+    ['Carpet / rug', 5], ['Boxes', 1.5], ['Rubbish bags', 1], ['Garden waste bags', 1.5]
+  ];
+  const qty = ITEMS.map(() => 0);
+  const list = document.getElementById('items');
+  ITEMS.forEach(([name], i) => {
+    const row = document.createElement('div');
+    row.className = 'item';
+    row.innerHTML = `<span>${name}</span><div class="qty"><button type="button" aria-label="Remove ${name}">−</button><output>0</output><button type="button" aria-label="Add ${name}">+</button></div>`;
+    const [minus, plus] = row.querySelectorAll('button');
+    minus.onclick = () => { qty[i] = Math.max(0, qty[i] - 1); update(); };
+    plus.onclick = () => { qty[i]++; update(); };
+    list.appendChild(row);
+  });
+
+  const cargo = document.getElementById('cargo');
+  const pctEl = document.getElementById('pct');
+  const sizeEl = document.getElementById('size');
+  const estList = document.getElementById('estList');
+  const waBtn = document.getElementById('waBtn');
+  const mailBtn = document.getElementById('mailBtn');
+
+  function label(p) {
+    if (p === 0) return 'Empty van';
+    if (p <= 15) return 'Small load';
+    if (p <= 30) return 'About a quarter van';
+    if (p <= 55) return 'About half a van';
+    if (p <= 80) return 'About three-quarters';
+    if (p <= 100) return 'A full van load';
+    return `Roughly ${Math.ceil(p / 100)} van loads`;
+  }
+
+  function update() {
+    const rows = list.children;
+    let units = 0;
+    const picked = [];
+    ITEMS.forEach(([name, u], i) => {
+      units += u * qty[i];
+      rows[i].querySelector('output').textContent = qty[i];
+      rows[i].classList.toggle('on', qty[i] > 0);
+      if (qty[i]) picked.push(`${qty[i]} × ${name}`);
+    });
+    const p = Math.round(units);
+    const fill = p > 100 ? 100 : p;
+    cargo.setAttribute('width', (138 * fill / 100).toFixed(1));
+    pctEl.textContent = p > 100 ? `${(p / 100).toFixed(1)}×` : p + '%';
+    sizeEl.textContent = label(p);
+    estList.textContent = picked.length ? picked.join(' · ') : 'Nothing added yet.';
+    const msg = picked.length
+      ? `Hi Bella Helen, I'd like a free quote. Items:\n- ${picked.join('\n- ')}\n(Estimator: ${label(p)})`
+      : `Hi Bella Helen, I'd like a free quote for a clearance.`;
+    waBtn.href = 'https://wa.me/447368255073?text=' + encodeURIComponent(msg);
+    mailBtn.href = 'mailto:bhhouseclearance@gmail.com?subject=' + encodeURIComponent('Quote request') + '&body=' + encodeURIComponent(msg);
+  }
+  document.getElementById('resetEst').onclick = () => { qty.fill(0); update(); };
+  update();
+
+  /* ---------- Quote form → email ---------- */
+  document.getElementById('quoteForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const body = `Name: ${v('fName')}\nPhone: ${v('fPhone')}\nArea: ${v('fArea')}\nJob: ${v('fType')}\n\n${v('fMsg')}`;
+    location.href = 'mailto:bhhouseclearance@gmail.com?subject=' + encodeURIComponent('Quote request — ' + v('fType')) + '&body=' + encodeURIComponent(body);
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .15 });
+  document.querySelectorAll('.reveal, .tier').forEach(el => io.observe(el));
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
